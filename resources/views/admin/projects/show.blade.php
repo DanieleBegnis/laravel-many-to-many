@@ -13,6 +13,13 @@
 
     <p>{{ $project->summary }}</p>
 
+    @if (count($project->technologies) > 0)
+    <p>Tecnologia usata:</p>
+        @foreach ($project->technologies as $technology)
+            {{ $technology->technology }}
+        @endforeach
+    @endif
+
     <p>Progetto per: {{ $project->client_name }}</p>
 
     <p>Creato il: {{ $project->created_at }}</p>
