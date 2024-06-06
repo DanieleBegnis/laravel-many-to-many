@@ -24,7 +24,7 @@ return new class extends Migration
             $table->unsignedBigInteger('technology_id');
             $table->foreign('technology_id')
             ->references('id')
-            ->on('technology')
+            ->on('technologies')
             //aggiungo cascade per eliminare entrambe le righe
             ->onDelete('cascade');
 
